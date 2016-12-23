@@ -67,7 +67,7 @@ float cpu_usage()
         }
         
     } // for each thread
-    
+    kr = vm_deallocate(mach_task_self(), (vm_offset_t)thread_list, thread_count * sizeof(thread_t));
     return tot_cpu;
 }
 
